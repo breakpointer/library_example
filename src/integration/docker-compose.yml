@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  host1:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    ports:
+     - "4040:4000"
+  host2:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    ports:
+     - "4041:4000"
