@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "start": "node backend/server.js",
-    "lint:fix": "eslint src/**/*.js --fix",
-    "lint": "eslint src/**/*.js",
-    "prettify": "prettier src/**/*.js --write",
+    "lint:fix": "eslint packages/**/*.js --fix",
+    "lint": "eslint packages/**/*.js",
+    "prettify": "prettier packages/**/*.js --write",
     "test": "lerna run test"
   },
   "husky": {
