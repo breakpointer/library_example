@@ -16,6 +16,12 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
