@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "integration.test.js",
-  "scripts": {
-    "test": "jest"
-  },
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "setup": "./bin/setup-env.sh",
+    "shutdown": "./bin/shutdown-env.sh",
+    "test": "jest"
+  },
   "devDependencies": {
     "jest": "^24.9.0",
     "supertest": "^4.0.2"
