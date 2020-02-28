@@ -4,8 +4,8 @@
   "description": "libray server backend",
   "main": "app/index.js",
   "scripts": {
-    "test": "jest",
-    "start": "node app/index.js"
+    "test": "jest --detectOpenHandles",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +20,9 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "apollo-server": "^2.9.7",
-    "apollo-server-express": "^2.9.7",
+    "apollo-server": "^2.10.1",
+    "apollo-server-express": "^2.10.1",
     "express": "^4.17.1",
-    "graphql": "^14.5.8"
+    "graphql": "^14.6.0"
   }
 }

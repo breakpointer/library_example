@@ -2,11 +2,13 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "node packages/backend/server.js",
     "lint:fix": "eslint packages/**/*.js --fix",
     "lint": "eslint packages/**/*.js",
     "prettify": "prettier packages/**/*.js --write",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "bootstrap": "lerna exec npm install",
+    "publish": "lerna publish --force-publish"
   },
   "husky": {
     "hooks": {
@@ -15,25 +17,24 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-flowtype": "^4.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.2.0",
-    "husky": "^3.0.9",
-    "lerna": "^3.18.3",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2"
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "husky": "^4.2.3",
+    "lerna": "^3.20.2",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1"
   },
   "dependencies": {
-    "react": "^16.11.0"
+    "react": "^16.13.0"
   }
 }

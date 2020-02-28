@@ -1,9 +1,11 @@
-const url = 'http://localhost:4000';
-const request = require('supertest');
+const supertest = require('supertest');
+const app = require('../app/index');
+
+const request = supertest(app);
 
 describe('REST', () => {
   it('should say hello', async () => {
-    const res = await request(url).get('/');
+    const res = await request.get('/');
     expect(res.statusCode).toEqual(200);
     expect(res.text).toEqual('Hello World!');
   });
@@ -11,7 +13,7 @@ describe('REST', () => {
 
 describe('GraphQL', () => {
   it('should have a greeting', async () => {
-    const res = await request(url)
+    const res = await request
       .post('/graphql')
       .send({
         query: '{ hello }',
