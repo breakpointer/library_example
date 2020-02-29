@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "node packages/backend/server.js",
+    "dev": "lerna run dev",
+    "start": "lerna run start",
     "lint:fix": "eslint packages/**/*.js --fix",
     "lint": "eslint packages/**/*.js",
     "prettify": "prettier packages/**/*.js --write",
