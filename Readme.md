@@ -19,7 +19,25 @@ This is an example Apollo, ReactJs, Graphql App. It is a very simple app that ex
 
 ## Testing
 
+### Package level
+
+This runs all the tests in the packages
 `npm test` 
+
+### Integration
+
+`cd integration_tests`
+`npm install`
+
+To build out the integration test environment using docker-compose...
+
+`npm run setup` 
+
+Then to execute the integration tests run
+`npm test` 
+
+To bring down the integration env run
+`npm run shutdown` 
 
 
 ## Project structure
